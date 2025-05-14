@@ -73,48 +73,58 @@ function App() {
 
 
   return (
-    <div class="container">
-      <h1 class="text-center">Ficha de Personagem - Cyberpunk</h1>
-      <Identidade idendificacao={Identidade} onHabilidadeChange={handleIdedidadeChange} />
-      <hr/>
-      <Atributos atributos={atributos} onAtributoChange={handleAtributoChange} />
-      <hr/>
-      <div class="row">
-        <div class="row">
-          <div class="col-3 sidetrack">
-            <Habilidades habilidades={habilidades} onHabilidadeChange={handleHabilidadeChange} />
-            <hr/>
-            <Caracteristicas char={caracteristicas} onCaracteristicaChange={handleCaracteristicaChange} />
-          </div>
-          <div class="col-9">
+    <div>
+
+      <div class="input-container">
+
+        <div class="container">
+          <h1 class="text-center">Ficha de Personagem - Cyberpunk</h1>
+          <Identidade idendificacao={Identidade} onHabilidadeChange={handleIdedidadeChange} />
+          <hr/>
+          <Atributos atributos={atributos} onAtributoChange={handleAtributoChange} />
+          <hr/>
+          <div class="row">
             <div class="row">
-              <div class="col-6">
-                <Meritos merito={meritos} onMeritoChange={handleMeritosChange} />
-              </div>
-              <div class="col-6">
-                <Health health={health} onHealthChange={handleHealthChange} />
+              <div class="col-3 sidetrack">
+                <Habilidades habilidades={habilidades} onHabilidadeChange={handleHabilidadeChange} />
                 <hr/>
-                <WillPower willPower={WillPower} onWillPowerChange={handleWillPowerChange} />
+                <Caracteristicas char={caracteristicas} onCaracteristicaChange={handleCaracteristicaChange} />
+              </div>
+              <div class="col-9">
+                <div class="row">
+                  <div class="col-6">
+                    <Meritos merito={meritos} onMeritoChange={handleMeritosChange} />
+                  </div>
+                  <div class="col-6">
+                    <Health health={health} onHealthChange={handleHealthChange} />
+                    <hr/>
+                    <WillPower willPower={WillPower} onWillPowerChange={handleWillPowerChange} />
+                    <hr/>
+                    <Humanidade humanidade={humanidade} onhumanidadeChange={handleHumanidadeChange} />
+                  </div>
+                  <div class="col">
+                    <Flaws flaws={flaws} onFlawsChange={handleFlawsChange} />
+                  </div>
+                </div>
                 <hr/>
-                <Humanidade humanidade={humanidade} onhumanidadeChange={handleHumanidadeChange} />
+                <div class="row">
+                  <Weapons weapons={weapons} onWeaponsChange={handleWeaponsChange} />
+                </div>
+                <div class="row">
+                  <Equipments equipments={equipments} onEquipmentsChange={handleEquipmentsChange} /> 
+                </div>
               </div>
-              <div class="col">
-                <Flaws flaws={flaws} onFlawsChange={handleFlawsChange} />
-              </div>
-            </div>
-            <hr/>
-            <div class="row">
-              <Weapons weapons={weapons} onWeaponsChange={handleWeaponsChange} />
-            </div>
-            <div class="row">
-              <Equipments equipments={equipments} onEquipmentsChange={handleEquipmentsChange} /> 
             </div>
           </div>
+
+
         </div>
       </div>
-
-
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
     </div>
+    
   );
 }
 

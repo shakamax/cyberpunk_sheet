@@ -7,43 +7,66 @@ function Atributos({ idendificacao, onIdentificacaoChange }) {
         <div class="col-4">
             <div class="input-row">
                 <label>Nome: </label>
-                <input class="cyberinput" type="Text" value={idendificacao.nome} onChange={(e) => onIdentificacaoChange('nome', e.target.value)} />
+                <input class="cyberinput" type="Text" />
+                {/* <input class="cyberinput" type="Text" value={idendificacao.nome} onChange={(e) => onIdentificacaoChange('nome', e.target.value)} /> */}
             </div>  
             <div>
-                <label>Player: </label>
-                <input type="Text" value={idendificacao.player} onChange={(e) => onIdentificacaoChange('player', e.target.value)} />
+                <div class="input-row">
+                    <label>Player: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.player} onChange={(e) => onIdentificacaoChange('player', e.target.value)} />
+                </div>
             </div>
             <div>
-                <label>Cronica: </label>
-                <input type="Text" value={idendificacao.cronica} onChange={(e) => onIdentificacaoChange('cronica', e.target.value)} />
+                <div class="input-row">
+                    <label>Cronica: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.cronica} onChange={(e) => onIdentificacaoChange('cronica', e.target.value)} />
+                </div>
             </div>
         </div>
         <div class="col-4">
             <div>
-                <label>Vicio: </label>
-                <input type="Text" value={idendificacao.vicio} onChange={(e) => onIdentificacaoChange('vicio', e.target.value)} />
+                <div class="input-row">
+                    <label>Vicio: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.vicio} onChange={(e) => onIdentificacaoChange('vicio', e.target.value)} />
+                    
+                </div>
             </div>
             <div>
+                <div class="input-row">
                 <label>Virtude: </label>
-                <input type="Text" value={idendificacao.virtude} onChange={(e) => onIdentificacaoChange('virtude', e.target.value)} />
+                <input class="cyberinput" type="Text" value={idendificacao.virtude} onChange={(e) => onIdentificacaoChange('virtude', e.target.value)} />
+
+                </div>
             </div>
             <div>
-                <label>Conceito: </label>
-                <input type="Text" value={idendificacao.conceito} onChange={(e) => onIdentificacaoChange('conceito', e.target.value)} />
+                <div class="input-row">
+                    <label>Conceito: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.conceito} onChange={(e) => onIdentificacaoChange('conceito', e.target.value)} />
+
+                </div>
             </div>
         </div>
         <div class="col-4">
             <div>
-                <label>Idade: </label>
-                <input type="Text" value={idendificacao.idade} onChange={(e) => onIdentificacaoChange('idade', e.target.value)} />
+                <div class="input-row">
+                    <label>Idade: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.idade} onChange={(e) => onIdentificacaoChange('idade', e.target.value)} />
+
+                </div>
             </div>
             <div>
-                <label>Facção: </label>
-                <input type="Text" value={idendificacao.faccao} onChange={(e) => onIdentificacaoChange('faccao', e.target.value)} />
+                <div class="input-row">
+                    <label>Facção: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.faccao} onChange={(e) => onIdentificacaoChange('faccao', e.target.value)} />
+
+                </div>
             </div>
             <div>
-                <label>Grupo: </label>
-                <input type="Text" value={idendificacao.grupo} onChange={(e) => onIdentificacaoChange('grupo', e.target.value)} />
+                <div class="input-row">
+                    <label>Grupo: </label>
+                    <input class="cyberinput" type="Text" value={idendificacao.grupo} onChange={(e) => onIdentificacaoChange('grupo', e.target.value)} />
+
+                </div>
             </div>
         </div>
 

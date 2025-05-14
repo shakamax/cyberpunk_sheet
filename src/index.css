@@ -29,23 +29,26 @@ code {
 }
 
 .container {
-  background-image: linear-gradient(135deg, #67676b 0%, #05142b 40%, #710f397e 90%);
+  background-image: linear-gradient(135deg, #00468359 0%, #7e013a9c 40%, #710f397e 90%);
+  /* background-image: linear-gradient(135deg, #67676b 0%, #05142b 40%, #710f397e 90%); */
+  /* animation: gradientShift 15s ease infinite; */
   background-size: 300% 300%;
-  animation: gradientShift 15s ease infinite;
   position: relative;
   padding: 2rem;
   border: 2px solid #0370b9;
   border-radius: 0;
-  
-  box-shadow:
+  top: 2rem;
+  bottom: 2rem;
+
+  /* animation: backglitch 50ms linear infinite; */
+  /* box-shadow:
     0 0 8px #00ffff,
     0 0 16px #00ffff,
-    inset 0 0 8px #00ffff;
-  clip-path: polygon(
-    0% 8px, 8px 0%, calc(100% - 8px) 0%, 100% 8px,
-    100% calc(100% - 8px), calc(100% - 8px) 100%,
-    8px 100%, 0% calc(100% - 8px)
-  );
+    inset 0 0 8px #00ffff; */
+  
+  box-shadow: inset 0px 0px 20px 20px #212121;
+  -webkit-clip-path: polygon(26% 0, 66% 0, 92% 0, 100% 6%, 100% 89%, 91% 100%, 0% 100%, 0 92%, 0 0);
+  clip-path: polygon(26% 0, 66% 0, 92% 0, 100% 6%, 100% 89%, 91% 100%, 0% 100%, 0 92%, 0 0);
   
   /* aspect-ratio: 9/16;
   -webkit-clip-path: polygon(0 0, 85% 0, 100% 14%, 100% 60%, 92% 65%, 93% 77%, 99% 80%, 99% 90%, 89% 100%, 0 100%);
@@ -53,41 +56,82 @@ code {
 
 }
 
+.input-container {
+  filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
+  animation: blinkShadowsFilter 8s ease-in infinite;
+}
+
 
 .input-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2%;
+  padding: 1%;
 }
 
-.input-row ::before {
-  clip-path: polygon(0 calc(100% - 10px), 10px 100%, 100% 100%, 100% calc(100% - 8px), calc(100% - 20px) calc(100% - 8px), calc(100% - 20px - 8px) calc(100% - 2px), 11px calc(100% - 2px), 0 calc(100% - 13px));
-
-}
 
 .cyberinput {
   width: 80%;
   /* border-radius: 2px; */
-  background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-bottom: 2px solid #0370b9; 
-  border-right: 2px solid #0370b9;
-  box-shadow: 3px 3px #ada6a685;
-  border-radius: 2px;
+  background-color: #0000007d;
+  padding: 3px;
+  color: #e0e0e0;
+  display: grid;
+  align-content: center;
+  justify-items: left;
+  align-items: center;
+  text-align: center;
+  padding-inline: 1em;
+  border: 1px solid #23f8ff6c;
+  -webkit-clip-path: polygon(
+    0% 0%,     /* canto superior esquerdo mais estreito */
+    85% 0%,    /* topo antes da “ponta” */
+    100% 15%,  /* ponta chanfrada direita no topo */
+    100% 85%,  /* ponta chanfrada direita no fim */
+    85% 100%,  /* base da ponta direita */
+    0% 100%,   /* canto inferior esquerdo */
+    0% 85%,    /* curva inferior esquerda */
+    0% 15%     /* curva superior esquerda */
+  );
+
+
+  clip-path: polygon(
+    0% 0%,     /* canto superior esquerdo mais estreito */
+    85% 0%,    /* topo antes da “ponta” */
+    100% 40%,  /* ponta chanfrada direita no topo */
+    100% 50%,  /* ponta chanfrada direita no fim */
+    98% 100%,  /* base da ponta direita */
+    0% 100%,   /* canto inferior esquerdo */
+    0% 85%,    /* curva inferior esquerda */
+    0% 15%     /* curva superior esquerda */
+  );
+
+    box-shadow:
+    0 0 5px #00ffff88,
+    0 0 10px #00ffff66,
+    0 0 20px #00ffff33,
+    inset 4px -1px 5px #00ffff55;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cyberinput:hover {
+  transition: all 1s ease-in-out;
+  border: 1px solid #23f9ff;
+  background: linear-gradient(90deg, transparent 0%, rgba(102, 224, 255, 0.2) 27%, rgba(102, 224, 255, 0.2) 63%, transparent 100%);
 }
 
 
+
 /* Animações */
 /* Animações */
 /* Animações */
 
-@keyframes gradientShift {
+/* @keyframes gradientShift {
   0% {background-position: 30% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 30% 50%;}
-}
+} */
 
 .cyber-glitch-1
 {
@@ -111,25 +155,54 @@ code {
 
 @keyframes blinkShadowsFilter {
   0% {
-    filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #730a35);
   }
 
   25% {
-    filter: drop-shadow(46px -36px 24px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 24px #9e30a9);
+    filter: drop-shadow(46px -36px 24px rgba(75, 128, 177, 0.616)) drop-shadow(-55px 40px 24px #730a35);
   }
 
   50% {
-    filter: drop-shadow(46px 36px 30px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
+    filter: drop-shadow(46px 36px 30px rgba(75, 128, 177, 0.616)) drop-shadow(-55px 40px 30px rgba(159, 48, 169, 0.2941176471));
   }
 
   75% {
-    filter: drop-shadow(20px -18px 25px rgba(64, 144, 181, 0.8980392157)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
+    filter: drop-shadow(20px -18px 25px rgba(75, 128, 177, 0.616)) drop-shadow(-20px 20px 25px rgba(159, 48, 169, 0.2941176471));
   }
 
   to {
-    filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #9e30a9);
+    filter: drop-shadow(46px 36px 28px rgba(64, 144, 181, 0.3411764706)) drop-shadow(-55px -40px 28px #730a35);
   }
 }/*# sourceMappingURL=style.css.map */
+
+
+@keyframes backglitch {
+  0% {
+    box-shadow: inset 0px 20px 20px 30px #212121;
+  }
+
+  50% {
+    box-shadow: inset 0px -20px 20px 30px hsl(297, 42%, 10%);
+  }
+
+  to {
+    box-shadow: inset 0px 20px 20px 30px #212121;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(-50%, 20%);
+  }
+
+  50% {
+    transform: rotate(180deg) translate(40%, 10%);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-50%, 20%);
+  }
+}
 
 /* Animações */
 /* Animações */
