@@ -22,14 +22,14 @@ function App() {
   
 
   //#region Atributos
-  const [atributos, setAtributos] = useState({ forca: 0, destreza: 0, /* outros atributos */ } as AtributoType);
+  const [atributos, setAtributos] = useState({ inteligencia: 0, raciocinio: 0, perseveranca: 0, forca: 0, destreza: 0, vigor: 0, presenca: 0, manipulacao: 0, autocontrole: 0 } as AtributoType);
   const handleAtributoChange = (atributo: string, valor: string) => {
     setAtributos({ ...atributos, [atributo]: parseInt(valor) });
   };
   //#endregion Atributos
   
   //#region Habilidades
-  const [habilidades, setHabilidades] = useState({ atletismo: 0, briga: 0, /* outras habilidades */ } as HabilidadesType);
+  const [habilidades, setHabilidades] = useState({academico:0, hack:0, mecanica:0, investigacao:0, medicina:0, oculto:0, politica:0, ciencia:0, atletismo: 0, briga: 0, direcao:0, armaFogo:0, infiltracao:0, furtividade:0, sobrevivencia:0, armaBranca:0, animais:0,empatia:0,expressao:0,intimidacao:0,persusasao:0,socializacao:0,manha:0,subterfugio:0} as HabilidadesType);
   const handleHabilidadeChange = (habilidade: string, valor: string) => {
     setHabilidades({ ...habilidades, [habilidade]: parseInt(valor) });
   };
