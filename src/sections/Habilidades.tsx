@@ -1,9 +1,35 @@
 import React from 'react';
-
-function Habilidades({ habilidades, onHabilidadeChange }) {
+export type HabilidadesType = {
+    academico: number;
+    hack: number;
+    mecanica: number;
+    investigacao: number;
+    medicina: number;
+    oculto: number;
+    investigation: number;
+    politica: number;
+    ciencia: number;
+    atletismo: number;
+    briga: number;
+    direcao: number;
+    armaFogo: number;
+    infiltracao: number;
+    furtividade: number;
+    sobrevivencia: number;
+    armaBranca: number;
+    animais: number;
+    empatia: number;
+    expressao: number;
+    intimidacao: number;
+    persusasao: number;
+    socializacao: number;
+    manha: number;
+    subterfugio: number;
+}
+function Habilidades({ habilidades, onHabilidadeChange }: { habilidades: HabilidadesType, onHabilidadeChange: ( key: string, valor: string) => void }) {
   return (
     <div>
-      <h2 class="text-center topHeader">Habilidades</h2>
+      <h2 className="text-center topHeader">Habilidades</h2>
       <div>
         <h2>Mental</h2>
         <div>
@@ -20,7 +46,7 @@ function Habilidades({ habilidades, onHabilidadeChange }) {
         </div>
         <div>
           <label>Investigação: </label>
-          <input type="number" value={habilidades.investigação} onChange={(e) => onHabilidadeChange('investigação', e.target.value)} />
+          <input type="number" value={habilidades.investigation} onChange={(e) => onHabilidadeChange('investigação', e.target.value)} />
         </div>
         <div>
           <label>Medicina: </label>

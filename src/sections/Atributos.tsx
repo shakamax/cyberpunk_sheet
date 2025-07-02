@@ -1,10 +1,22 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Atributos({ atributos, onAtributoChange }) {
+export type AtributoType = {
+    inteligencia: number;
+    raciocinio: number;
+    perseveranca: number;
+    forca: number;
+    destreza: number;
+    vigor: number;
+    presenca: number;
+    manipulacao: number;
+    autocontrole: number;
+}
+
+function Atributos({ atributos, onAtributoChange }: { atributos: AtributoType, onAtributoChange: Function }) {
   return (
-    <div class="row">
-        <div class="col-4">
+    <div className="row">
+        <div className="col-4">
             <h2>Atributos mentais</h2>
                 <div>
                     <label>Inteligência: </label>
@@ -19,7 +31,7 @@ function Atributos({ atributos, onAtributoChange }) {
                     <input type="number" value={atributos.perseveranca} onChange={(e) => onAtributoChange('perseveranca', e.target.value)} />
                 </div>
         </div>
-        <div class="col-4">
+        <div className="col-4">
             <h2>Atributos Físicos</h2>
             <div>
                 <label>Força: </label>
@@ -31,14 +43,14 @@ function Atributos({ atributos, onAtributoChange }) {
             </div>
             <div>
                 <label>Vigor: </label>
-                <input type="number" value={atributos.Vigor} onChange={(e) => onAtributoChange('destreza', e.target.value)} />
+                <input type="number" value={atributos.vigor} onChange={(e) => onAtributoChange('vigor', e.target.value)} />
             </div>
         </div>
-        <div class="col-4">
+        <div className="col-4">
             <h2>Atributos Sociais</h2>
             <div>
                 <label>Presença: </label>
-                <input type="number" value={atributos.presença} onChange={(e) => onAtributoChange('presenca', e.target.value)} />
+                <input type="number" value={atributos.presenca} onChange={(e) => onAtributoChange('presenca', e.target.value)} />
             </div>
             <div>
                 <label>Manipulação: </label>
